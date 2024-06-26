@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+TAS:wght@100..400&display=swap');
+
+.splash-container {
+    margin-top: 5rem;
+    padding: 5rem;
+    background: linear-gradient(45deg, rgb(18, 84, 110), white);
+    border: 5px solid rgb(2, 194, 146) !important;
+    border-radius: 55rem;
+    box-shadow: 0 10px 25px rgb(19, 0, 194)
+}
+
+.splash-container > h1 {
+    color: white;
+    font-size: 70px;
+    margin-bottom: 2rem
+}
+
+.splash-container > div h1 {
+    font-weight: bolder;
+    font-style: italic;
+    color: white;
+    font-size: 50px;
+    margin-bottom: 2rem
+}
+
+.splash-container > span {
+    font-family: "Playwrite", cursive !important;
+    font-size: 10px;
+    font-weight: bolder;
+    font-style: italic;
+    color: white
+}
+
+.title-style {
+    padding-top: 1rem;
+    color: white !important;
+    font-weight: 400 !important;
+    font-style: normal !important
+}

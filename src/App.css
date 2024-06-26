@@ -1,0 +1,18 @@
+/* General body styling for the gradient background */
+body {
+  background: linear-gradient(45deg, white, rgb(18, 84, 110));
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+#root {
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.main-content {
+  padding-top: 60px; /* Adjust this value based on your navbar height */
+}
+
+/* Add any additional styling for your components here if needed */

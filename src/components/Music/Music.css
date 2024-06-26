@@ -1,0 +1,29 @@
+.music-page {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center
+}
+
+.song-card {
+    margin: 10px;
+    border: 5px solid rgb(2, 194, 146) !important;
+    background: black;
+    border-radius: 55px;
+    padding: 10px;
+    padding-top: 10px;
+    box-shadow: 0 10px 25px rgb(19, 0, 194);
+    color: rgb(255, 255, 255)
+}
+
+.music-title {
+    color: rgb(2, 194, 146);
+    font-size: 50px;
+    margin-bottom: 2rem;
+    border: 5px solid rgb(2, 194, 146) !important;
+    background-color: black;
+    border-radius: 55px;
+    box-shadow: 0 10px 25px rgb(19, 0, 194);
+    padding: 10px 20px;
+    display: inline-block
+}

@@ -1,0 +1,26 @@
+.profile-page {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px
+}
+
+.profile-details {
+    text-align: right;
+    flex-basis: 30%
+}
+
+.profile-details h2 {
+    color: rgb(2, 194, 146) !important
+}
+
+.user-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 20%;
+    box-shadow: 0 10px 25px rgb(19, 0, 194)
+}
+
+.user-songs {
+    width: 60%;
+    flex-basis: 70%
+}

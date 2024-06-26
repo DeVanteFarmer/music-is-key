@@ -1,0 +1,44 @@
+.link {
+    color: rgb(18, 84, 110)
+  }
+  
+  .link:hover {
+    color: white
+  }
+  
+  .auth-box {
+    background: linear-gradient(45deg, rgb(18, 84, 110), black);
+    padding: 3rem 8rem;
+    border-radius: 25px;
+    width: 50%;
+    max-width: 600px;
+    box-sizing: border-box;
+    position: fixed; /* Keep the auth-box stationary */
+    top: 50%; /* Position it vertically at 50% of the viewport height */
+    left: 50%; /* Center it horizontally */
+    transform: translate(-50%, -50%); /* Center the box exactly */
+    z-index: 1000 /* Ensure it stays above other content */
+  }
+  
+  .auth-box h1 span {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: oblique;
+    color: white
+  }
+  
+  .auth-box input {
+    width: 100%; /* Ensure input fields are full width */
+    margin: 1rem 0; /* Add vertical margin for spacing */
+    display: block; /* Ensure the input fields are block elements */
+    padding: 0.5rem; /* Add padding inside input fields */
+    border: 1px solid #ccc; /* Add border to input fields */
+    border-radius: 5px; /* Add border radius to input fields */
+    box-sizing: order-box /* Include padding and border in width calculation */
+  }
+
+  .icon {
+    width: 7rem;
+    height: 7rem;
+    margin: auto;
+    padding-bottom: 10rem
+  }

@@ -1,0 +1,78 @@
+.song-details-card {
+    margin: 10px;
+    border: 5px solid rgb(2, 194, 146) !important;
+    background: linear-gradient(45deg, rgb(18, 84, 110), white);
+    border-radius: 55px;
+    padding: 10px;
+    padding-top: 10px;
+    box-shadow: 0 10px 25px rgb(19, 0, 194);
+    color: rgb(255, 255, 255)
+    }
+    
+    .song-details-card .card-title {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      color: white
+    }
+    
+    .song-details-card .card-text {
+      font-size: 1.1em;
+      margin-bottom: 10px;
+      color: white
+    }
+    
+    .key-link {
+      color: rgb(19, 0, 194);
+      cursor: pointer;
+      font-weight: bold;
+      text-decoration: underline
+    }
+    
+    .key-link:hover {
+      color: rgb(2, 194, 146)
+    }
+    
+    .comments-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px
+    }
+    
+    .comment-box {
+      margin: 10px;
+      border: 5px solid rgb(2, 194, 146) !important;
+      background:  black;
+      border-radius: 55px;
+      padding: 10px;
+      padding-top: 10px;
+      box-shadow: 0 10px 25px rgb(19, 0, 194);
+      color: rgb(255, 255, 255)
+    }
+    
+    .comment-box .comment-user {
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: rgb(2, 194, 146)
+    }
+    
+    .comment-box .comment-body {
+      font-size: 1.2em;
+      color: linear-gradient(45deg, rgb(18, 84, 110), white)
+    }
+    
+    .key-details-page {
+      padding: 20px
+  }
+  
+  .key-details-page h2 {
+    color: rgb(2, 194, 146);
+    font-size: 50px;
+    margin-bottom: 2rem;
+    border: 5px solid rgb(2, 194, 146) !important;
+    background-color: black;
+    border-radius: 55px;
+    box-shadow: 0 10px 25px rgb(19, 0, 194);
+    padding: 10px 20px;
+    display: inline-block
+  }
