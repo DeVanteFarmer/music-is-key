@@ -31,16 +31,8 @@ export const SubmitPage = () => {
         title,
         artist,
         userId: user.id,
-        keyId: newKeyId
+        keyId: newKeyId,
       }
-
-      console.log("New Song:", newSong) // Debugging
-
-      // Save the song to local storage
-      const songs = JSON.parse(localStorage.getItem('songs')) || []
-      songs.push(newSong)
-      localStorage.setItem('songs', JSON.stringify(songs))
-      console.log("Updated Songs:", songs) // Debugging
 
       // Create a new key object
       const newKey = {
@@ -51,24 +43,36 @@ export const SubmitPage = () => {
         promotesHappiness,
       }
 
-      console.log("New Key:", newKey) // Debugging
+      // POST the new song to the JSON server
+      await fetch('http://localhost:8088/songs', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(newSong),
+      })
 
-      // Save the key to local storage
-      const keys = JSON.parse(localStorage.getItem('keys')) || []
-      keys.push(newKey)
-      localStorage.setItem('keys', JSON.stringify(keys))
-      console.log("Updated Keys:", keys) // Debugging
+      // POST the new key to the JSON server
+      await fetch('http://localhost:8088/keys', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(newKey),
+      })
 
-      navigate('/MusicPage')
+      navigate('/MusicPage');
     } catch (error) {
-      console.error('Error submitting song', error)
+      console.error('Error submitting song', error);
     }
   }
 
   return (
     <div className="submit-page">
       <p>
-        To find the Key, EnergyRate, and Happiness levels of your song, visit <a href="https://tunebat.com/" target="_blank" rel="noopener noreferrer"> this key analyzer </a>. Once you have the information, return here to complete the submission.
+        To find the Key, EnergyRate, and Happiness levels of your song, visit 
+        <a href="https://tunebat.com/" target="_blank" rel="noopener noreferrer">
+        this key analyzer</a>. Once you have the information, return here to complete the submission.
       </p>
       <h2>Submit a Song</h2>
       <form onSubmit={handleSubmit}>

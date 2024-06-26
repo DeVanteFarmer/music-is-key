@@ -1,86 +1,100 @@
 {
-    "users": [
-      {
-        "id": 1,
-        "userName": "hEARSall",
-        "email": "hershallreading@sounds.com",
-        "password": "432GTA",
-        "img": "https://api.unrealperson.com/image?name=image.98419.2505690.jpg&type=tpdne"
-      },
-      {
-        "id": 2,
-        "userName": "MelodyMaker",
-        "email": "melodymaker@music.com",
-        "password": "123Melody",
-        "img": "https://api.unrealperson.com/image?name=image.12345.678910.jpg&type=tpdne"
-      },
-      {
-        "email": "cohort9ers@newforce.mountwest.sarahbarry.com",
-        "password": "123WWE",
-        "userName": "console.log(DeVante)",
-        "img": "https://scontent-iad3-1.xx.fbcdn.net/v/t39.30808-6/432303116_2381879055535449_8952873324388053232_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=fYaLhGzQKIcQ7kNvgEv3mG-&_nc_ht=scontent-iad3-1.xx&oh=00_AYBr1-HOzB0Y6yRlJQUbE7Ai9od2lF-_Q2s7xcPUZi4qKg&oe=667FA3E0",
-        "id": 3
-      }
-    ],
-    "songs": [
-      {
-        "id": 1,
-        "title": "Love and Happiness",
-        "artist": "Al Green",
-        "userId": 1,
-        "keyId": 1
-      },
-      {
-        "id": 2,
-        "title": "Imagine",
-        "artist": "John Lennon",
-        "userId": 2,
-        "keyId": 2
-      },
-      {
-        "id": 3,
-        "title": "Bohemian Rhapsody",
-        "artist": "Queen",
-        "userId": 2,
-        "keyId": 3
-      }
-    ],
-    "songComments": [
-      {
-        "id": 1,
-        "songId": 1,
-        "userId": 2,
-        "body": "This is a classic, I love this song!"
-      },
-      {
-        "songId": 2,
-        "userId": 1,
-        "body": "CLASSIC!",
-        "id": 2
-      }
-    ],
-    "likedSongs": [],
-    "keys": [
-      {
-        "id": 1,
-        "songId": 1,
-        "key": "Ab Minor",
-        "energyRate": 43,
-        "promotesHappiness": true
-      },
-      {
-        "id": 2,
-        "songId": 2,
-        "key": "C Major",
-        "energyRate": 26,
-        "promotesHappiness": false
-      },
-      {
-        "id": 3,
-        "songId": 3,
-        "key": "C Minor",
-        "energyRate": 39,
-        "promotesHappiness": false
-      }
-    ]
-  }
+  "users": [
+    {
+      "id": 1,
+      "userName": "hEARSall",
+      "email": "hershallreading@sounds.com",
+      "password": "432GTA",
+      "img": "https://api.unrealperson.com/image?name=image.98419.2505690.jpg&type=tpdne"
+    },
+    {
+      "id": 2,
+      "userName": "MelodyMaker",
+      "email": "melodymaker@music.com",
+      "password": "123Melody",
+      "img": "https://api.unrealperson.com/image?name=image.12345.678910.jpg&type=tpdne"
+    },
+    {
+      "email": "cohort9ers@newforce.mountwest.sarahbarry.com",
+      "password": "123WWE",
+      "userName": "console.log(DeVante)",
+      "img": "https://scontent-iad3-1.xx.fbcdn.net/v/t39.30808-6/432303116_2381879055535449_8952873324388053232_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=fYaLhGzQKIcQ7kNvgEv3mG-&_nc_ht=scontent-iad3-1.xx&oh=00_AYBr1-HOzB0Y6yRlJQUbE7Ai9od2lF-_Q2s7xcPUZi4qKg&oe=667FA3E0",
+      "id": 3
+    }
+  ],
+  "songs": [
+    {
+      "id": 1,
+      "title": "Love and Happiness",
+      "artist": "Al Green",
+      "userId": 1,
+      "keyId": 1
+    },
+    {
+      "id": 2,
+      "title": "Imagine",
+      "artist": "John Lennon",
+      "userId": 2,
+      "keyId": 2
+    },
+    {
+      "id": 3,
+      "title": "Bohemian Rhapsody",
+      "artist": "Queen",
+      "userId": 2,
+      "keyId": 3
+    },
+    {
+      "id": 1719428553979,
+      "title": "Gold Digger",
+      "artist": "Kanye West, Jamie Foxx",
+      "userId": 1,
+      "keyId": 1719428553979
+    }
+  ],
+  "songComments": [
+    {
+      "id": 1,
+      "songId": 1,
+      "userId": 2,
+      "body": "This is a classic, I love this song!"
+    },
+    {
+      "songId": 2,
+      "userId": 1,
+      "body": "CLASSIC!",
+      "id": 2
+    }
+  ],
+  "likedSongs": [],
+  "keys": [
+    {
+      "id": 1,
+      "songId": 1,
+      "key": "Ab Minor",
+      "energyRate": 43,
+      "promotesHappiness": true
+    },
+    {
+      "id": 2,
+      "songId": 2,
+      "key": "C Major",
+      "energyRate": 26,
+      "promotesHappiness": false
+    },
+    {
+      "id": 3,
+      "songId": 3,
+      "key": "C Minor",
+      "energyRate": 39,
+      "promotesHappiness": false
+    },
+    {
+      "id": 1719428553979,
+      "songId": 1719428553979,
+      "key": "C# Minor",
+      "energyRate": 70,
+      "promotesHappiness": false
+    }
+  ]
+}

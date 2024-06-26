@@ -9,7 +9,7 @@ import { SubmitPage } from "../components/Music/Submit.jsx"
 import { KeyDetails } from "../components/Music/KeyDetails.jsx"
 
 export const ApplicationViews = () => {
-  const [currentUser, setCurrentUser] = useState({})
+  const [currentUser, setCurrentUser] = useState(null)
 
   useEffect(() => {
     const localUser = localStorage.getItem("freq_user")
