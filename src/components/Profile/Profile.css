@@ -1,55 +1,142 @@
 .profile-page {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: lightsalmon;
+  color: black;
+  height: 100vh;
 }
 
 .profile-details {
-    text-align: right;
-    flex-basis: 30%
+  text-align: center;
+  width: 30%;
 }
 
 .profile-details h2 {
-    color: rgb(2, 194, 146) !important
+  color: white;
 }
 
 .user-avatar {
-    width: 150px;
-    height: 150px;
-    border-radius: 20%;
-    box-shadow: 0 10px 25px rgb(19, 0, 194)
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
 }
 
-.user-songs {
-    width: 60%;
-    flex-basis: 70%
+.user-songs,
+.liked-songs {
+  width: 30%;
+  border: 5px solid black;
+  border-radius: 5px;
+  background-color: white;
+  padding: 10px;
+  overflow-y: auto;
+  max-height: 80vh; /* Adjust as needed */
 }
 
-.comments-section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 20px
-  }
-  
-  .comment-box {
-    margin: 10px;
-    border: 5px solid rgb(2, 194, 146) !important;
-    background:  black;
-    border-radius: 55px;
-    padding: 10px;
-    padding-top: 10px;
-    box-shadow: 0 10px 25px rgb(19, 0, 194);
-    color: rgb(255, 255, 255)
-  }
-  
-  .comment-box .comment-user {
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: rgb(2, 194, 146)
-  }
-  
-  .comment-box .comment-body {
-    font-size: 1.2em;
-    color: linear-gradient(45deg, rgb(18, 84, 110), white)
-  }
+/* Custom scrollbar styling for WebKit browsers */
+.user-songs::-webkit-scrollbar,
+.liked-songs::-webkit-scrollbar {
+  width: 10px;
+}
+
+.user-songs::-webkit-scrollbar-track,
+.liked-songs::-webkit-scrollbar-track {
+  background: black;
+  border-radius: 10px;
+}
+
+.user-songs::-webkit-scrollbar-thumb,
+.liked-songs::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 10px;
+}
+
+.user-songs::-webkit-scrollbar-thumb:hover,
+.liked-songs::-webkit-scrollbar-thumb:hover {
+  background: black;
+}
+
+/* Custom scrollbar styling for Firefox */
+.user-songs,
+.liked-songs {
+  scrollbar-width: thick;
+  scrollbar-color: lightsalmon black;
+  scroll-behavior: smooth;
+}
+
+.user-songs h3,
+.liked-songs h3 {
+  color: black;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.song-card {
+  margin: 10px;
+  border: 2px solid white !important;
+  background: lightsalmon;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 5px 15px lightsalmon;
+  color: black;
+}
+
+.song-card .card-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.song-card .card-text {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.key-link {
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.key-link:hover {
+  color: lightsalmon;
+}
+
+button {
+  font-size: 0.9em;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+/* Custom button styles */
+.custom-button {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px; /* Add margin for spacing between buttons */
+}
+
+.custom-icon-button {
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 5px; /* Add margin for spacing between buttons */
+}
+
+/* Button group container */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping if necessary */
+}

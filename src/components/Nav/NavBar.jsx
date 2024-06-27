@@ -1,16 +1,16 @@
 /* eslint-disable no-unused-vars */
-import React from 'react'
-import { Nav, NavLink, Navbar, NavbarBrand, NavItem } from 'reactstrap'
-import { Link, useNavigate } from 'react-router-dom'
-import './NavBar.css'
-import { Logo } from '../../assets/logo.jsx'
+import React from 'react';
+import { Nav, NavLink, Navbar, NavbarBrand, NavItem } from 'reactstrap';
+import { Link, useNavigate } from 'react-router-dom';
+import './NavBar.css';
+import { Logo } from '../../assets/logo.jsx';
 
 export const NavigationBar = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   return (
     <>
-      <Navbar className="navbar-dark" color="dark" dark expand="md"> 
+      <Navbar className="navbar-custom" expand="md"> 
         <NavbarBrand href="/" className="d-flex align-items-center">
           <Logo size={40} style={{ marginRight: 10 }} />
           <span>Music-Is-KEY</span>
@@ -28,8 +28,8 @@ export const NavigationBar = () => {
           <NavLink
             href="/"
             onClick={() => {
-              localStorage.removeItem("freq_user")
-              navigate("/", { replace: true })
+              localStorage.removeItem("freq_user");
+              navigate("/", { replace: true });
             }}
           >
             Logout
@@ -37,5 +37,5 @@ export const NavigationBar = () => {
         </Nav> 
       </Navbar>
     </>
-  )
-}
+  );
+};

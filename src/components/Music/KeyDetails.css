@@ -1,0 +1,45 @@
+.key-details-page {
+    padding: 20px;
+  }
+  
+  .key-details-page h2 {
+    color: white;
+    font-size: 50px;
+    margin-bottom: 2rem;
+    border: 5px solid black !important;
+    background-color: lightsalmon;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    display: inline-block;
+  }
+  
+  .songs-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .song-details-card {
+    margin: 10px;
+    border: 5px solid black !important;
+    background: lightsalmon;
+    border-radius: 25px;
+    padding: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    color: black;
+    width: 300px;
+  }
+  
+  .song-details-card .card-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: black;
+  }
+  
+  .song-details-card .card-text {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: black;
+  }
+  

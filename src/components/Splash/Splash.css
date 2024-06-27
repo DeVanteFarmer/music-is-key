@@ -3,37 +3,42 @@
 .splash-container {
     margin-top: 5rem;
     padding: 5rem;
-    background: linear-gradient(45deg, rgb(18, 84, 110), white);
-    border: 5px solid rgb(2, 194, 146) !important;
-    border-radius: 55rem;
-    box-shadow: 0 10px 25px rgb(19, 0, 194)
-}
-
-.splash-container > h1 {
+    background-color: lightsalmon;
+    border-radius: 2rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     color: white;
-    font-size: 70px;
-    margin-bottom: 2rem
 }
 
-.splash-container > div h1 {
+.splash-container h1 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.splash-container h2 span {
+    font-family: 'Playwrite', cursive;
+    font-size: 1rem;
     font-weight: bolder;
     font-style: italic;
     color: white;
-    font-size: 50px;
-    margin-bottom: 2rem
+    display: block;
+    margin-bottom: 2rem;
 }
 
-.splash-container > span {
-    font-family: "Playwrite", cursive !important;
-    font-size: 10px;
-    font-weight: bolder;
-    font-style: italic;
-    color: white
+.splash-container button {
+    font-size: 1.25rem;
+    padding: 0.5rem 2rem;
+    border-radius: 0.5rem;
+    background-color: black;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
 }
 
-.title-style {
-    padding-top: 1rem;
-    color: white !important;
-    font-weight: 400 !important;
-    font-style: normal !important
+.splash-container button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
 }

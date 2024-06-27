@@ -66,7 +66,20 @@
       "id": 2
     }
   ],
-  "likedSongs": [],
+  "likedSongs": [
+    {
+      "songId": 2,
+      "liked": true,
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "songId": 3,
+      "liked": true,
+      "userId": 1,
+      "id": 2
+    }
+  ],
   "keys": [
     {
       "id": 1,

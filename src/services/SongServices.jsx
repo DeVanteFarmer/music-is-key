@@ -47,16 +47,23 @@ export const getLikes = async (songId) => {
   return likes.length
 }
 
-export const addLike = async (songId) => {
+export const addLike = async (songId, userId) => {
   const response = await fetch(`${API_BASE_URL}/likedSongs`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ songId, liked: true }),
-  })
-  return await response.json()
-}
+    body: JSON.stringify({ songId, liked: true, userId }),
+  });
+  return await response.json();
+};
+
+export const removeLike = async (songId, userId) => {
+  const response = await fetch(`${API_BASE_URL}/likedSongs?songId=${songId}&userId=${userId}`, {
+    method: "DELETE",
+  });
+  return await response.json();
+};
 
 export const updateSong = async (songId, updatedSong) => {
   const response = await fetch(`${API_BASE_URL}/songs/${songId}`, {
@@ -68,3 +75,8 @@ export const updateSong = async (songId, updatedSong) => {
   })
   return response.json()
 }
+
+export const getSongsByIds = async (ids) => {
+  const promises = ids.map(id => fetch(`${API_BASE_URL}/songs/${id}`).then(res => res.json()));
+  return Promise.all(promises);
+};

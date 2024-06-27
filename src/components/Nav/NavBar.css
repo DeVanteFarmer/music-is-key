@@ -1,53 +1,41 @@
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: #004257;
-    color: white;
-    border-radius: 25px
-  }
-  
-  .navbar-dark .navbar-brand img {
-    vertical-align: middle
-  }
-  
-  .navbar-dark .navbar-brand span {
-    margin-left: 10px
-  }
-  
-  .navbar-dark {
-    background: linear-gradient(45deg, rgb(18, 84, 110), white);
-    color: white
-  }
-  
-  .navbar-dark .navbar-brand {
-    color: white;
-    font-weight: bold;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center
-  }
-  
-  .navbar-dark .nav-link {
-    color: white;
-    font-size: 1.2rem;
-    margin-left: 1rem
-  }
-  
-  .navbar-dark .nav-link:hover {
-    color: grey
-  }
-  
-  .navbar-dark .navbar-text {
-    color: white
-  }
-  
-  .nav-link {
-    color: rgb(2, 194, 146) !important;
-    margin-right: 1rem
-  }
-  
-  .nav-link:hover {
-    color: rgb(19, 0, 194) !important
-  }
+.navbar-custom {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: black;
+  color: white;
+  border-radius: 0;
+  padding: 1rem;
+}
+
+.navbar-custom .navbar-brand img {
+  vertical-align: middle;
+}
+
+.navbar-custom .navbar-brand span {
+  margin-left: 10px;
+}
+
+.navbar-custom {
+  background: lightsalmon;
+  color: white;
+}
+
+.navbar-custom .navbar-brand {
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-custom .nav-link {
+  color: white;
+  font-size: 1.2rem;
+  margin-left: 1rem;
+}
+
+.navbar-custom .nav-link:hover {
+  color: black;
+}

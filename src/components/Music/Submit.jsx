@@ -70,8 +70,7 @@ export const SubmitPage = () => {
   return (
     <div className="submit-page">
       <p>
-        To find the Key, EnergyRate, and Happiness levels of your song, visit 
-        <a href="https://tunebat.com/" target="_blank" rel="noopener noreferrer">
+        To find the Key, EnergyRate, and Happiness levels of your song, visit <a href="https://tunebat.com/" target="_blank" rel="noopener noreferrer">
         this key analyzer</a>. Once you have the information, return here to complete the submission.
       </p>
       <h2>Submit a Song</h2>

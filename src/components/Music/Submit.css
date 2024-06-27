@@ -1,55 +1,69 @@
 .submit-page {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background: linear-gradient(45deg, rgb(18, 84, 110), white);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
-  }
-  
-  .submit-page h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: rgb(2, 0, 17) !important
-  }
-  
-  .form-group {
-    margin-bottom: 15px
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: rgb(2, 0, 17) !important
-  }
-  
-  input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ced4da;
-    border-radius: 4px;
-    box-sizing: border-box
-  }
-  
-  button {
-    width: 100%;
-    padding: 10px;
-    background-color: rgb(2, 194, 146) !important;
-    color: rgb(19, 0, 194) !important;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px
-  }
-  
-  button:hover {
-    background-color: #0056b3
-  }
-  
-  .submit-page form {
-    display: flex;
-    flex-direction: column
-  }
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: lightsalmon;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+.submit-page h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: black;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: black;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.submit-page form {
+  display: flex;
+  flex-direction: column;
+}
+
+.submit-page a {
+  color: white;
+  text-decoration: underline;
+}
+
+.submit-page a:hover {
+  color: black;
+}
+
   

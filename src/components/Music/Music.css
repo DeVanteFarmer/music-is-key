@@ -2,28 +2,56 @@
     margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center
+    justify-content: center;
 }
 
 .song-card {
     margin: 10px;
-    border: 5px solid rgb(2, 194, 146) !important;
-    background: black;
-    border-radius: 55px;
+    border: 5px solid black !important;
+    background: lightsalmon;
+    border-radius: 25px;
     padding: 10px;
     padding-top: 10px;
-    box-shadow: 0 10px 25px rgb(19, 0, 194);
-    color: rgb(255, 255, 255)
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    color: black;
+    width: 300px;
 }
 
 .music-title {
-    color: rgb(2, 194, 146);
+    color: white;
     font-size: 50px;
     margin-bottom: 2rem;
-    border: 5px solid rgb(2, 194, 146) !important;
-    background-color: black;
-    border-radius: 55px;
-    box-shadow: 0 10px 25px rgb(19, 0, 194);
+    border: 5px solid black !important;
+    background-color: lightsalmon;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     padding: 10px 20px;
-    display: inline-block
+    display: inline-block;
+}
+
+/* Custom button styles */
+.custom-button {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px; /* Add margin for spacing between buttons */
+}
+
+.custom-icon-button {
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 5px; /* Add margin for spacing between buttons */
+}
+
+/* Button group container */
+.button-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping if necessary */
 }
