@@ -59,32 +59,38 @@ export const SongDetails = ({ currentUser }) => {
   if (!song || !user || !keyDetails) return <div>Loading...</div>
 
   return (
-    <Card className="song-details-card">
-      <CardBody>
-        <CardTitle tag="h5">{song.title}</CardTitle>
-        <CardText>Artist: {song.artist}</CardText>
-        <CardText>Uploaded By: {user.userName}</CardText>
-        <CardText>
-          <span
-            className="key-link"
-            onClick={() => navigate(`/MusicPage/keyDetails/${song.keyId}`)}
-          >
-            Key: {keyDetails.key}
-          </span>
-        </CardText>
-        <CardText>Energy rate: {keyDetails.energyRate}</CardText>
-        <CardText>Promotes Happiness?: {keyDetails.promotesHappiness ? "Yes" : "No"}</CardText>
-        <CardText>Likes: {likes}</CardText>
-        <div className="comments-section">
-          <CardText>Comments:</CardText>
-          {comments.map((comment, index) => (
-            <div className="comment-box" key={index}>
-              <div className="comment-user">{comment.userName}</div>
-              <div className="comment-body">{comment.body}</div>
-            </div>
-          ))}
-        </div>
-      </CardBody>
-    </Card>
+    <>
+      <div className="music-title">SONG DETAILS!</div>
+    <div className="song-details-container">
+      <Card className="song-details-card">
+        <CardBody>
+          <CardTitle tag="h5">{song.title}</CardTitle>
+          <CardText>Artist: {song.artist}</CardText>
+          <CardText>Uploaded By: {user.userName}</CardText>
+          <CardText>
+            <span
+              className="key-link"
+              onClick={() => navigate(`/MusicPage/keyDetails/${song.keyId}`)}
+            >
+              Key: {keyDetails.key}
+            </span>
+          </CardText>
+          <CardText>Energy rate: {keyDetails.energyRate}</CardText>
+          <CardText>Promotes Happiness?: {keyDetails.promotesHappiness ? "Yes" : "No"}</CardText>
+          <CardText>Likes: {likes}</CardText>
+          <div className="comments-section">
+            <CardText>Comments:</CardText>
+            {comments.map((comment, index) => (
+              <div className="comment-box" key={index}>
+                <div className="comment-user">{comment.userName}</div>
+                <div className="comment-body">{comment.body}</div>
+              </div>
+            ))}
+          </div>
+        </CardBody>
+      </Card>
+    </div>
+    </>
+    
   )
 }

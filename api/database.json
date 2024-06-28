@@ -50,6 +50,62 @@
       "artist": "Kanye West, Jamie Foxx",
       "userId": 1,
       "keyId": 1719428553979
+    },
+    {
+      "id": 1719582499859,
+      "title": "The Twist",
+      "artist": "Chubby Checker",
+      "userId": 1,
+      "keyId": 1719582499859
+    },
+    {
+      "id": 1719582739507,
+      "title": "Smooth",
+      "artist": "Santana, Rob Thomas",
+      "userId": 2,
+      "keyId": 1719582739507
+    },
+    {
+      "id": 1719582809855,
+      "title": "I Gotta Feeling",
+      "artist": "Black Eyed Peas",
+      "userId": 2,
+      "keyId": 1719582809855
+    },
+    {
+      "id": 1719583163607,
+      "title": "Party Rock Anthem",
+      "artist": "LMFAO, Lauren Bennett, GoonRock",
+      "userId": 3,
+      "keyId": 1719583163607
+    },
+    {
+      "id": 1719583229231,
+      "title": "Yeah!",
+      "artist": "USHER, Lil Jon, Ludacris",
+      "userId": 3,
+      "keyId": 1719583229231
+    },
+    {
+      "id": 1719583296687,
+      "title": "Low",
+      "artist": "Flo Rida, T-Pain",
+      "userId": 3,
+      "keyId": 1719583296687
+    },
+    {
+      "id": 1719583372481,
+      "title": "Too Close",
+      "artist": "Next",
+      "userId": 3,
+      "keyId": 1719583372481
+    },
+    {
+      "id": 1719586007827,
+      "title": "Doo Wop (That Thing)",
+      "artist": "Ms. Lauryn Hill",
+      "userId": 1,
+      "keyId": 1719586007827
     }
   ],
   "songComments": [
@@ -64,6 +120,36 @@
       "userId": 1,
       "body": "CLASSIC!",
       "id": 2
+    },
+    {
+      "songId": 1719428553979,
+      "userId": 2,
+      "body": "\"This song got me through college\"",
+      "id": 3
+    },
+    {
+      "songId": 1719582499859,
+      "userId": 2,
+      "body": "Who is Chubby Checker?",
+      "id": 4
+    },
+    {
+      "songId": 1,
+      "userId": 3,
+      "body": "Wow! Who knew this song promoted happiness",
+      "id": 5
+    },
+    {
+      "songId": 1719582499859,
+      "userId": 3,
+      "body": "Do The Twist!",
+      "id": 6
+    },
+    {
+      "songId": 1719582809855,
+      "userId": 3,
+      "body": "\"TONIGHT'S THE NIGHT!!!\"",
+      "id": 7
     }
   ],
   "likedSongs": [
@@ -78,6 +164,42 @@
       "liked": true,
       "userId": 1,
       "id": 2
+    },
+    {
+      "songId": 1719428553979,
+      "liked": true,
+      "userId": 2,
+      "id": 3
+    },
+    {
+      "songId": 1,
+      "liked": true,
+      "userId": 2,
+      "id": 4
+    },
+    {
+      "songId": 1,
+      "liked": true,
+      "userId": 3,
+      "id": 5
+    },
+    {
+      "songId": 1,
+      "liked": true,
+      "userId": 3,
+      "id": 6
+    },
+    {
+      "songId": 1719582499859,
+      "liked": true,
+      "userId": 3,
+      "id": 7
+    },
+    {
+      "songId": 1719582809855,
+      "liked": true,
+      "userId": 3,
+      "id": 8
     }
   ],
   "keys": [
@@ -107,6 +229,62 @@
       "songId": 1719428553979,
       "key": "C# Minor",
       "energyRate": 70,
+      "promotesHappiness": false
+    },
+    {
+      "id": 1719582499859,
+      "songId": 1719582499859,
+      "key": "E Major",
+      "energyRate": 62,
+      "promotesHappiness": true
+    },
+    {
+      "id": 1719582739507,
+      "songId": 1719582739507,
+      "key": "A Major",
+      "energyRate": 92,
+      "promotesHappiness": true
+    },
+    {
+      "id": 1719582809855,
+      "songId": 1719582809855,
+      "key": "C Major",
+      "energyRate": 77,
+      "promotesHappiness": true
+    },
+    {
+      "id": 1719583163607,
+      "songId": 1719583163607,
+      "key": "F Minor",
+      "energyRate": 73,
+      "promotesHappiness": false
+    },
+    {
+      "id": 1719583229231,
+      "songId": 1719583229231,
+      "key": "D Major",
+      "energyRate": 79,
+      "promotesHappiness": false
+    },
+    {
+      "id": 1719583296687,
+      "songId": 1719583296687,
+      "key": "B♭ Minor",
+      "energyRate": 61,
+      "promotesHappiness": false
+    },
+    {
+      "id": 1719583372481,
+      "songId": 1719583372481,
+      "key": "G Major",
+      "energyRate": 40,
+      "promotesHappiness": true
+    },
+    {
+      "id": 1719586007827,
+      "songId": 1719586007827,
+      "key": "D Major",
+      "energyRate": 55,
       "promotesHappiness": false
     }
   ]

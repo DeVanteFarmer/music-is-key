@@ -4,6 +4,10 @@ export const getAllSongs = () => {
   return fetch(`${API_BASE_URL}/songs`).then((res) => res.json())
 }
 
+export const getAllKeys = () => {
+  return fetch(`${API_BASE_URL}/keys`).then((res) => res.json())
+}
+
 export const getSongsById = (id) => {
   return fetch(`${API_BASE_URL}/songs/${id}`).then((res) => res.json())
 }

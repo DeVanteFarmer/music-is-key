@@ -1,18 +1,15 @@
+.song-details-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height of the viewport */
+}
+
 .key-details-page {
     padding: 20px;
   }
   
-  .key-details-page h2 {
-    color: white;
-    font-size: 50px;
-    margin-bottom: 2rem;
-    border: 5px solid black !important;
-    background-color: lightsalmon;
-    border-radius: 25px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    padding: 10px 20px;
-    display: inline-block;
-  }
+
   
   .songs-card {
     display: flex;

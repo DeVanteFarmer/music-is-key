@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { getUserById, getUserSongs } from "../../services/UserServices.jsx";
-import { deleteSong, updateSong, getKeyById, getLikes, getSongsByIds, removeLike } from "../../services/SongServices.jsx";
+import { deleteSong, updateSong, getKeyById, getSongsByIds, removeLike } from "../../services/SongServices.jsx";
 import { Card, CardBody, CardTitle, CardText, Button, Form, FormGroup, Input } from "reactstrap";
 import './Profile.css';
 import { EditPencil, TrashcanDelete } from "../../assets/icons.jsx";
@@ -13,9 +13,7 @@ export const Profile = ({ currentUser }) => {
   const [userDetails, setUserDetails] = useState({});
   const [userSongs, setUserSongs] = useState([]);
   const [likedSongs, setLikedSongs] = useState([]);
-  const [keyDetails, setKeyDetails] = useState({});
-  // eslint-disable-next-line no-unused-vars
-  const [likes, setLikes] = useState({});
+  const [keyDetailsMap, setKeyDetailsMap] = useState({});
   const [showEditForm, setShowEditForm] = useState(null);
   const [editSong, setEditSong] = useState({ title: "", artist: "", userId: "", keyId: "" });
 
@@ -29,17 +27,27 @@ export const Profile = ({ currentUser }) => {
           const songsData = await getUserSongs(currentUser.id);
           setUserSongs(songsData.filter(song => song.userId === currentUser.id));
 
+          // Fetch key details for user songs
+          const keyDetailsPromises = songsData.map(song => getKeyById(song.keyId));
+          const keyDetailsResults = await Promise.all(keyDetailsPromises);
+          const keyDetailsMap = keyDetailsResults.reduce((acc, keyDetail) => {
+            acc[keyDetail.id] = keyDetail;
+            return acc;
+          }, {});
+          setKeyDetailsMap(keyDetailsMap);
+
           // Fetch liked songs
           const likedSongsData = await fetchLikedSongs(currentUser.id);
           setLikedSongs(likedSongsData);
 
-          // Fetch likes for user songs
-          const likesData = {};
-          for (const song of songsData) {
-            const songLikes = await getLikes(song.id);
-            likesData[song.id] = songLikes;
-          }
-          setLikes(likesData);
+          // Fetch key details for liked songs
+          const likedSongsKeyDetailsPromises = likedSongsData.map(song => getKeyById(song.keyId));
+          const likedSongsKeyDetailsResults = await Promise.all(likedSongsKeyDetailsPromises);
+          const likedSongsKeyDetailsMap = likedSongsKeyDetailsResults.reduce((acc, keyDetail) => {
+            acc[keyDetail.id] = keyDetail;
+            return acc;
+          }, {});
+          setKeyDetailsMap(prevKeyDetailsMap => ({ ...prevKeyDetailsMap, ...likedSongsKeyDetailsMap }));
 
         } else {
           console.error("Current user ID is undefined");
@@ -57,13 +65,6 @@ export const Profile = ({ currentUser }) => {
       const likedSongs = await response.json();
       const likedSongIds = likedSongs.map(song => song.songId);
       const songs = await getSongsByIds(likedSongIds);
-
-      const likesData = {};
-      for (const song of songs) {
-        const songLikes = await getLikes(song.id);
-        likesData[song.id] = songLikes;
-      }
-      setLikes(likesData);
 
       return songs;
     } catch (error) {
@@ -97,15 +98,6 @@ export const Profile = ({ currentUser }) => {
     }
   };
 
-  const handleSongClick = async (songId) => {
-    try {
-      const keyData = await getKeyById(songId);
-      setKeyDetails(keyData);
-    } catch (error) {
-      console.error("Error fetching song data:", error);
-    }
-  };
-
   if (!currentUser) return <div>Loading...</div>; // Show loading state if currentUser is not yet set
 
   return (
@@ -121,16 +113,13 @@ export const Profile = ({ currentUser }) => {
               <CardText>
                 <span
                   className="key-link"
-                  onClick={() => {
-                    handleSongClick(song.keyId);
-                    navigate(`/MusicPage/keyDetails/${song.keyId}`);
-                  }}
+                  onClick={() => navigate(`/MusicPage/keyDetails/${song.keyId}`)}
                 >
-                  Key: {keyDetails.key}
+                  Key: {keyDetailsMap[song.keyId]?.key}
                 </span>
               </CardText>
-              <CardText>Energy rate: {keyDetails.energyRate}</CardText>
-              <CardText>Promotes Happiness?: {keyDetails.promotesHappiness ? "Yes" : "No"}</CardText>
+              <CardText>Energy rate: {keyDetailsMap[song.keyId]?.energyRate}</CardText>
+              <CardText>Promotes Happiness?: {keyDetailsMap[song.keyId]?.promotesHappiness ? "Yes" : "No"}</CardText>
               <div className="button-group">
                 <Button color="warning" className="custom-button" onClick={(e) => {
                   e.stopPropagation();
@@ -178,18 +167,15 @@ export const Profile = ({ currentUser }) => {
               <CardText>
                 <span
                   className="key-link"
-                  onClick={() => {
-                    handleSongClick(song.keyId);
-                    navigate(`/MusicPage/keyDetails/${song.keyId}`);
-                  }}
+                  onClick={() => navigate(`/MusicPage/keyDetails/${song.keyId}`)}
                 >
-                  Key: {keyDetails.key}
+                  Key: {keyDetailsMap[song.keyId]?.key}
                 </span>
               </CardText>
-              <CardText>Energy rate: {keyDetails.energyRate}</CardText>
-              <CardText>Promotes Happiness?: {keyDetails.promotesHappiness ? "Yes" : "No"}</CardText>
+              <CardText>Energy rate: {keyDetailsMap[song.keyId]?.energyRate}</CardText>
+              <CardText>Promotes Happiness?: {keyDetailsMap[song.keyId]?.promotesHappiness ? "Yes" : "No"}</CardText>
               <div className="button-group">
-              <Button color="danger" className="custom-icon-button" onClick={() => handleRemoveLike(song.id)}><TrashcanDelete size={25} />Like</Button>
+                <Button color="danger" className="custom-icon-button" onClick={() => handleRemoveLike(song.id)}><TrashcanDelete size={25} />Like</Button>
               </div>
             </CardBody>
           </Card>

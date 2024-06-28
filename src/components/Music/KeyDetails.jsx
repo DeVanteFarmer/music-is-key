@@ -2,10 +2,10 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import { getAllSongs, getKeyById } from "../../services/SongServices.jsx"
+import { getAllSongs, getAllKeys } from "../../services/SongServices.jsx"
 import { getUserById } from "../../services/UserServices.jsx"
 import { Card, CardBody, CardTitle, CardText } from "reactstrap"
-import './SongDetails.css'
+import './KeyDetails.css'
 
 export const KeyDetails = () => {
   const { keyId } = useParams()
@@ -16,22 +16,31 @@ export const KeyDetails = () => {
   useEffect(() => {
     const fetchKeyDetails = async () => {
       try {
-        const keyData = await getKeyById(keyId)
+        // Fetch all keys
+        const keysArray = await getAllKeys()
+        const keyData = keysArray.find(key => key.id === parseInt(keyId))
         setKeyDetails(keyData)
 
-        const songsArray = await getAllSongs()
-        const filteredSongs = songsArray.filter(song => song.keyId === parseInt(keyId))
-        setSongs(filteredSongs)
+        if (keyData) {
+          // Fetch all songs
+          const songsArray = await getAllSongs()
+          // Filter songs based on key value
+          const filteredSongs = songsArray.filter(song => {
+            const songKey = keysArray.find(key => key.id === song.keyId)
+            return songKey && songKey.key === keyData.key
+          })
+          setSongs(filteredSongs)
 
-        // Fetch user details for each song
-        const userIds = [...new Set(filteredSongs.map(song => song.userId))]
-        const userPromises = userIds.map(id => getUserById(id))
-        const userResults = await Promise.all(userPromises)
-        const usersMap = userResults.reduce((acc, user) => {
-          acc[user.id] = user
-          return acc
-        }, {})
-        setUsers(usersMap)
+          // Fetch user details for each song
+          const userIds = [...new Set(filteredSongs.map(song => song.userId))]
+          const userPromises = userIds.map(id => getUserById(id))
+          const userResults = await Promise.all(userPromises)
+          const usersMap = userResults.reduce((acc, user) => {
+            acc[user.id] = user
+            return acc
+          }, {})
+          setUsers(usersMap)
+        }
       } catch (error) {
         console.error("Error fetching key or songs data:", error)
       }
@@ -42,9 +51,10 @@ export const KeyDetails = () => {
   if (!keyDetails) return <div>Loading...</div>
 
   return (
+    <div className="song-details-container">
     <div className="key-details-page">
-      <h2>Key: {keyDetails.key}</h2>
-      <div className="songs-card">
+      <h2 className="music-title">Key: {keyDetails.key}</h2>
+        <div className="songs-card">
         {songs.map((song) => (
           <Card key={song.id} className="song-details-card">
             <CardBody>
@@ -57,6 +67,8 @@ export const KeyDetails = () => {
           </Card>
         ))}
       </div>
+      </div>
+      
     </div>
   )
 }
