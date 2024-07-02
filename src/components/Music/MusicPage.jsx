@@ -65,23 +65,23 @@ export const MusicPage = ({ currentUser }) => {
               <div className="button-group">
                 {currentUser?.id === song.userId ? (
                   <>
-                    <Button color="warning" className="custom-button" onClick={(e) => {
+                    <Button color="warning" className="custom-button-edit" onClick={(e) => {
                       e.stopPropagation();
                       setEditSong({ title: song.title, artist: song.artist, userId: song.userId, keyId: song.keyId });
                       setShowEditForm(song.id);
                     }}>Edit <EditPencil size={15} /> </Button>
-                    <Button color="danger" className="custom-icon-button" onClick={(e) => {
+                    <Button color="danger" className="custom-icon-button-delete" onClick={(e) => {
                       e.stopPropagation();
                       handleDelete(song.id);
                     }}><TrashcanDelete size={25} /></Button>
                   </>
                 ) : (
                   <>
-                    <Button color="primary" className="custom-button" onClick={(e) => {
+                    <Button color="primary" className="custom-button-like" onClick={(e) => {
                       e.stopPropagation();
                       handleAddLike(song.id);
                     }}>Like</Button>
-                    <Button color="info" className="custom-icon-button" onClick={(e) => {
+                    <Button color="info" className="custom-icon-button-comment" onClick={(e) => {
                       e.stopPropagation();
                       setShowCommentForm(song.id);
                     }}><ChatIcon size={27} /></Button>

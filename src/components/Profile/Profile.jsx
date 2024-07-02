@@ -121,12 +121,12 @@ export const Profile = ({ currentUser }) => {
               <CardText>Energy rate: {keyDetailsMap[song.keyId]?.energyRate}</CardText>
               <CardText>Promotes Happiness?: {keyDetailsMap[song.keyId]?.promotesHappiness ? "Yes" : "No"}</CardText>
               <div className="button-group">
-                <Button color="warning" className="custom-button" onClick={(e) => {
+                <Button color="warning" className="custom-button-edit" onClick={(e) => {
                   e.stopPropagation();
                   setEditSong({ title: song.title, artist: song.artist, userId: song.userId, keyId: song.keyId });
                   setShowEditForm(song.id);
                 }}>Edit <EditPencil size={15} /> </Button>
-                <Button color="danger" className="custom-icon-button" onClick={(e) => {
+                <Button color="danger" className="custom-icon-button-delete" onClick={(e) => {
                   e.stopPropagation();
                   handleDelete(song.id);
                 }}><TrashcanDelete size={25} /></Button>
@@ -175,7 +175,7 @@ export const Profile = ({ currentUser }) => {
               <CardText>Energy rate: {keyDetailsMap[song.keyId]?.energyRate}</CardText>
               <CardText>Promotes Happiness?: {keyDetailsMap[song.keyId]?.promotesHappiness ? "Yes" : "No"}</CardText>
               <div className="button-group">
-                <Button color="danger" className="custom-icon-button" onClick={() => handleRemoveLike(song.id)}><TrashcanDelete size={25} />Like</Button>
+                <Button color="danger" className="custom-icon-button-delete" onClick={() => handleRemoveLike(song.id)}><TrashcanDelete size={25} />Like</Button>
               </div>
             </CardBody>
           </Card>
