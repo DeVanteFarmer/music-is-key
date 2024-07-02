@@ -17,6 +17,11 @@
     width: 300px;
 }
 
+.song-card:hover {
+    color: white;
+    cursor: url('/logo.svg'), auto;
+  }
+
 .music-title {
     color: white;
     font-size: 50px;
@@ -29,7 +34,7 @@
 }
 
 /* Custom button styles */
-.custom-button {
+.custom-button-edit {
     width: 100px;
     display: flex;
     justify-content: center;
@@ -37,14 +42,51 @@
     margin: 5px; /* Add margin for spacing between buttons */
 }
 
-.custom-icon-button {
-    width: 40px;
+.custom-button-edit:hover {
+    color: white;
+    cursor: url('/pencil.svg'), auto;
+  }
+
+.custom-button-like {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px; /* Add margin for spacing between buttons */
+}
+
+.custom-button-like:hover {
+    color: white;
+    cursor: url('/like.svg'), auto;
+  }
+
+.custom-icon-button-comment {
+    width: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0;
     margin: 5px; /* Add margin for spacing between buttons */
 }
+
+.custom-icon-button-comment:hover {
+    color: white;
+    cursor: url('/comment.svg'), auto;
+  }
+
+.custom-icon-button-delete {
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 5px; /* Add margin for spacing between buttons */
+}
+
+.custom-icon-button-delete:hover {
+    color: white;
+    cursor: url('/delete.svg'), auto;
+  }
 
 /* Button group container */
 .button-group {
