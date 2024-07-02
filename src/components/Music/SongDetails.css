@@ -41,7 +41,7 @@
 }
 
 .key-link {
-  color: black;
+  color: blue;
   cursor: pointer;
   font-weight: bold;
   text-decoration: underline;
@@ -49,6 +49,7 @@
 
 .key-link:hover {
   color: white;
+  cursor: url('/logo.svg'), auto;
 }
 
 .comments-section {

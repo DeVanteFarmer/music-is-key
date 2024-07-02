@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import "./Register.css";
 import { Button, Form, FormGroup, Input } from "reactstrap";
 import { createUser, getUserByEmail } from "../services/UserServices.jsx";
-import { TuneFreq } from "../assets/icons.jsx";
+import { Logo } from "../assets/logo.jsx";
 
 export const Register = (props) => {
   const [user, setUser] = useState({
@@ -44,7 +44,7 @@ export const Register = (props) => {
     <main className="auth-box">
       <Form onSubmit={handleRegister}>
         <FormGroup className="mb-2 text-center">
-          <h1 className="icon"> <TuneFreq /></h1>
+          <h1 className="icon"> <Logo /></h1>
           <span className="body-style">Register Here</span>
         </FormGroup>
         <FormGroup className="mb-3">

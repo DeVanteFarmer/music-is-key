@@ -5,12 +5,11 @@ import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import { getUserByEmail } from "../services/UserServices.jsx";
 import { Button, Form, FormGroup, Input, Label } from "reactstrap";
-import { TuneFreq } from "../assets/icons.jsx";
 import { Logo } from "../assets/logo.jsx";
 
 export const Login = () => {
-  const [email, setEmail] = useState("hershallreading@sounds.com");
-  const [password, setPassword] = useState("432GTA");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
   const handleLogin = (e) => {

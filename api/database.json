@@ -20,6 +20,13 @@
       "userName": "console.log(DeVante)",
       "img": "https://scontent-iad3-1.xx.fbcdn.net/v/t39.30808-6/432303116_2381879055535449_8952873324388053232_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=fYaLhGzQKIcQ7kNvgEv3mG-&_nc_ht=scontent-iad3-1.xx&oh=00_AYBr1-HOzB0Y6yRlJQUbE7Ai9od2lF-_Q2s7xcPUZi4qKg&oe=667FA3E0",
       "id": 3
+    },
+    {
+      "email": "Soundaround@dotcom.com",
+      "password": "321fun",
+      "userName": "SoundTown96",
+      "img": "https://api.unrealperson.com/image?name=image.53265.3654189.jpg&type=tpdne",
+      "id": 4
     }
   ],
   "songs": [
@@ -45,67 +52,95 @@
       "keyId": 3
     },
     {
-      "id": 1719428553979,
+      "id": 4,
       "title": "Gold Digger",
       "artist": "Kanye West, Jamie Foxx",
       "userId": 1,
-      "keyId": 1719428553979
+      "keyId": 4
     },
     {
-      "id": 1719582499859,
+      "id": 5,
       "title": "The Twist",
       "artist": "Chubby Checker",
       "userId": 1,
-      "keyId": 1719582499859
+      "keyId": 5
     },
     {
-      "id": 1719582739507,
+      "id": 6,
       "title": "Smooth",
       "artist": "Santana, Rob Thomas",
       "userId": 2,
-      "keyId": 1719582739507
+      "keyId": 6
     },
     {
-      "id": 1719582809855,
+      "id": 7,
       "title": "I Gotta Feeling",
       "artist": "Black Eyed Peas",
       "userId": 2,
-      "keyId": 1719582809855
+      "keyId": 7
     },
     {
-      "id": 1719583163607,
+      "id": 8,
       "title": "Party Rock Anthem",
       "artist": "LMFAO, Lauren Bennett, GoonRock",
       "userId": 3,
-      "keyId": 1719583163607
+      "keyId": 8
     },
     {
-      "id": 1719583229231,
+      "id": 9,
       "title": "Yeah!",
       "artist": "USHER, Lil Jon, Ludacris",
       "userId": 3,
-      "keyId": 1719583229231
+      "keyId": 9
     },
     {
-      "id": 1719583296687,
+      "id": 10,
       "title": "Low",
       "artist": "Flo Rida, T-Pain",
       "userId": 3,
-      "keyId": 1719583296687
+      "keyId": 10
     },
     {
-      "id": 1719583372481,
+      "id": 11,
       "title": "Too Close",
       "artist": "Next",
       "userId": 3,
-      "keyId": 1719583372481
+      "keyId": 11
     },
     {
-      "id": 1719586007827,
+      "id": 12,
       "title": "Doo Wop (That Thing)",
       "artist": "Ms. Lauryn Hill",
       "userId": 1,
-      "keyId": 1719586007827
+      "keyId": 12
+    },
+    {
+      "id": 13,
+      "title": "Endless Love",
+      "artist": "Diana Ross & Lionel Richie",
+      "userId": 4,
+      "keyId": 13
+    },
+    {
+      "id": 14,
+      "title": "Closer",
+      "artist": "The Chainsmokers, Halsey",
+      "userId": 4,
+      "keyId": 14
+    },
+    {
+      "id": 15,
+      "title": "Hey Jude",
+      "artist": "The Beatles",
+      "userId": 4,
+      "keyId": 15
+    },
+    {
+      "id": 16,
+      "title": "Physical",
+      "artist": "Olivia Newton-John",
+      "userId": 4,
+      "keyId": 16
     }
   ],
   "songComments": [
@@ -122,13 +157,13 @@
       "id": 2
     },
     {
-      "songId": 1719428553979,
+      "songId": 4,
       "userId": 2,
       "body": "\"This song got me through college\"",
       "id": 3
     },
     {
-      "songId": 1719582499859,
+      "songId": 5,
       "userId": 2,
       "body": "Who is Chubby Checker?",
       "id": 4
@@ -140,16 +175,106 @@
       "id": 5
     },
     {
-      "songId": 1719582499859,
+      "songId": 5,
       "userId": 3,
       "body": "Do The Twist!",
       "id": 6
     },
     {
-      "songId": 1719582809855,
+      "songId": 7,
       "userId": 3,
       "body": "\"TONIGHT'S THE NIGHT!!!\"",
       "id": 7
+    },
+    {
+      "songId": 6,
+      "userId": 4,
+      "body": "Gets me dancing!",
+      "id": 8
+    },
+    {
+      "songId": 7,
+      "userId": 4,
+      "body": "Feel-good hit.",
+      "id": 9
+    },
+    {
+      "songId": 3,
+      "userId": 4,
+      "body": "A true musical journey.",
+      "id": 10
+    },
+    {
+      "songId": 5,
+      "userId": 4,
+      "body": "Checker's signature hit.",
+      "id": 11
+    },
+    {
+      "songId": 2,
+      "userId": 4,
+      "body": "So inspiring!",
+      "id": 12
+    },
+    {
+      "songId": 12,
+      "userId": 3,
+      "body": "So smooth!",
+      "id": 13
+    },
+    {
+      "songId": 16,
+      "userId": 1,
+      "body": "I love this song sooo much!",
+      "id": 14
+    },
+    {
+      "songId": 16,
+      "userId": 2,
+      "body": "Nice jam",
+      "id": 15
+    },
+    {
+      "songId": 16,
+      "userId": 3,
+      "body": "Physical takes me back to the good ole days",
+      "id": 16
+    },
+    {
+      "songId": 15,
+      "userId": 1,
+      "body": "This song always lifts my spirits. Absolute classic!",
+      "id": 17
+    },
+    {
+      "songId": 15,
+      "userId": 2,
+      "body": "Hey Jude never gets old. The Beatles at their best",
+      "id": 18
+    },
+    {
+      "songId": 15,
+      "userId": 3,
+      "body": "I love how this song brings everyone together. Timeless tune!",
+      "id": 19
+    },
+    {
+      "songId": 13,
+      "userId": 1,
+      "body": "Their voices blend perfectly!",
+      "id": 20
+    },
+    {
+      "songId": 13,
+      "userId": 2,
+      "body": "Beautiful duet, timeless classic!",
+      "id": 21
+    },
+    {
+      "songId": 13,
+      "userId": 3,
+      "body": "Perfect love song, so touching!",
+      "id": 22
     }
   ],
   "likedSongs": [
@@ -166,7 +291,7 @@
       "id": 2
     },
     {
-      "songId": 1719428553979,
+      "songId": 4,
       "liked": true,
       "userId": 2,
       "id": 3
@@ -181,25 +306,133 @@
       "songId": 1,
       "liked": true,
       "userId": 3,
-      "id": 5
-    },
-    {
-      "songId": 1,
-      "liked": true,
-      "userId": 3,
       "id": 6
     },
     {
-      "songId": 1719582499859,
+      "songId": 5,
       "liked": true,
       "userId": 3,
       "id": 7
     },
     {
-      "songId": 1719582809855,
+      "songId": 7,
       "liked": true,
       "userId": 3,
       "id": 8
+    },
+    {
+      "songId": 9,
+      "liked": true,
+      "userId": 2,
+      "id": 9
+    },
+    {
+      "songId": 10,
+      "liked": true,
+      "userId": 2,
+      "id": 10
+    },
+    {
+      "songId": 12,
+      "liked": true,
+      "userId": 2,
+      "id": 11
+    },
+    {
+      "songId": 11,
+      "liked": true,
+      "userId": 2,
+      "id": 12
+    },
+    {
+      "songId": 6,
+      "liked": true,
+      "userId": 4,
+      "id": 13
+    },
+    {
+      "songId": 7,
+      "liked": true,
+      "userId": 4,
+      "id": 14
+    },
+    {
+      "songId": 2,
+      "liked": true,
+      "userId": 4,
+      "id": 15
+    },
+    {
+      "songId": 3,
+      "liked": true,
+      "userId": 4,
+      "id": 16
+    },
+    {
+      "songId": 5,
+      "liked": true,
+      "userId": 4,
+      "id": 17
+    },
+    {
+      "songId": 12,
+      "liked": true,
+      "userId": 3,
+      "id": 18
+    },
+    {
+      "songId": 16,
+      "liked": true,
+      "userId": 1,
+      "id": 19
+    },
+    {
+      "songId": 16,
+      "liked": true,
+      "userId": 2,
+      "id": 20
+    },
+    {
+      "songId": 16,
+      "liked": true,
+      "userId": 3,
+      "id": 21
+    },
+    {
+      "songId": 15,
+      "liked": true,
+      "userId": 1,
+      "id": 22
+    },
+    {
+      "songId": 15,
+      "liked": true,
+      "userId": 2,
+      "id": 23
+    },
+    {
+      "songId": 15,
+      "liked": true,
+      "userId": 3,
+      "id": 24
+    },
+    {
+      "songId": 13,
+      "liked": true,
+      "userId": 1,
+      "id": 25
+    },
+    {
+      "songId": 13,
+      "liked": true,
+      "userId": 2,
+      "id": 26
+    },
+    {
+      "songId": 13,
+      "liked": true,
+      "userId": 3,
+      "id": 27
     }
   ],
   "keys": [
@@ -225,67 +458,95 @@
       "promotesHappiness": false
     },
     {
-      "id": 1719428553979,
-      "songId": 1719428553979,
+      "id": 4,
+      "songId": 4,
       "key": "C# Minor",
       "energyRate": 70,
       "promotesHappiness": false
     },
     {
-      "id": 1719582499859,
-      "songId": 1719582499859,
+      "id": 5,
+      "songId": 5,
       "key": "E Major",
       "energyRate": 62,
       "promotesHappiness": true
     },
     {
-      "id": 1719582739507,
-      "songId": 1719582739507,
+      "id": 6,
+      "songId": 6,
       "key": "A Major",
       "energyRate": 92,
       "promotesHappiness": true
     },
     {
-      "id": 1719582809855,
-      "songId": 1719582809855,
+      "id": 7,
+      "songId": 7,
       "key": "C Major",
       "energyRate": 77,
       "promotesHappiness": true
     },
     {
-      "id": 1719583163607,
-      "songId": 1719583163607,
+      "id": 8,
+      "songId": 8,
       "key": "F Minor",
       "energyRate": 73,
       "promotesHappiness": false
     },
     {
-      "id": 1719583229231,
-      "songId": 1719583229231,
+      "id": 9,
+      "songId": 9,
       "key": "D Major",
       "energyRate": 79,
       "promotesHappiness": false
     },
     {
-      "id": 1719583296687,
-      "songId": 1719583296687,
+      "id": 10,
+      "songId": 10,
       "key": "B♭ Minor",
       "energyRate": 61,
       "promotesHappiness": false
     },
     {
-      "id": 1719583372481,
-      "songId": 1719583372481,
+      "id": 11,
+      "songId": 11,
       "key": "G Major",
       "energyRate": 40,
       "promotesHappiness": true
     },
     {
-      "id": 1719586007827,
-      "songId": 1719586007827,
+      "id": 12,
+      "songId": 12,
       "key": "D Major",
       "energyRate": 55,
       "promotesHappiness": false
+    },
+    {
+      "id": 13,
+      "songId": 13,
+      "key": "B♭ Major",
+      "energyRate": 29,
+      "promotesHappiness": false
+    },
+    {
+      "id": 14,
+      "songId": 14,
+      "key": "A♭ Major",
+      "energyRate": 52,
+      "promotesHappiness": false
+    },
+    {
+      "id": 15,
+      "songId": 15,
+      "key": "F Major",
+      "energyRate": 61,
+      "promotesHappiness": false
+    },
+    {
+      "id": 16,
+      "songId": 16,
+      "key": "E Minor",
+      "energyRate": 74,
+      "promotesHappiness": true
     }
   ]
 }

@@ -12,12 +12,14 @@ export const KeyDetails = () => {
   const [keyDetails, setKeyDetails] = useState(null)
   const [songs, setSongs] = useState([])
   const [users, setUsers] = useState({})
+  const [allKeys, setAllKeys] = useState([])
 
   useEffect(() => {
-    const fetchKeyDetails = async () => {
+    const fetchData = async () => {
       try {
         // Fetch all keys
         const keysArray = await getAllKeys()
+        setAllKeys(keysArray)
         const keyData = keysArray.find(key => key.id === parseInt(keyId))
         setKeyDetails(keyData)
 
@@ -45,30 +47,32 @@ export const KeyDetails = () => {
         console.error("Error fetching key or songs data:", error)
       }
     }
-    fetchKeyDetails()
+    fetchData()
   }, [keyId])
 
   if (!keyDetails) return <div>Loading...</div>
 
   return (
     <div className="song-details-container">
-    <div className="key-details-page">
-      <h2 className="music-title">Key: {keyDetails.key}</h2>
+      <div className="key-details-page">
+        <h2 className="music-title">Key: {keyDetails.key}</h2>
         <div className="songs-card">
-        {songs.map((song) => (
-          <Card key={song.id} className="song-details-card">
-            <CardBody>
-              <CardTitle tag="h5">{song.title}</CardTitle>
-              <CardText>Artist: {song.artist}</CardText>
-              <CardText>Uploaded By: {users[song.userId]?.userName}</CardText>
-              <CardText>Energy rate: {keyDetails.energyRate}</CardText>
-              <CardText>Promotes Happiness?: {keyDetails.promotesHappiness ? "Yes" : "No"}</CardText>
-            </CardBody>
-          </Card>
-        ))}
+          {songs.map((song) => {
+            const songKeyDetails = allKeys.find(key => key.id === song.keyId)
+            return (
+              <Card key={song.id} className="song-details-card">
+                <CardBody>
+                  <CardTitle tag="h5">{song.title}</CardTitle>
+                  <CardText>Artist: {song.artist}</CardText>
+                  <CardText>Uploaded By: {users[song.userId]?.userName}</CardText>
+                  <CardText>Energy rate: {songKeyDetails?.energyRate}</CardText>
+                  <CardText>Promotes Happiness?: {songKeyDetails?.promotesHappiness ? "Yes" : "No"}</CardText>
+                </CardBody>
+              </Card>
+            )
+          })}
+        </div>
       </div>
-      </div>
-      
     </div>
   )
 }
