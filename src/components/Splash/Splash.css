@@ -10,7 +10,7 @@
 }
 
 .splash-container h1 {
-    color: white;
+    color: black;
     font-size: 3rem;
     margin-bottom: 2rem;
     font-weight: bolder;
@@ -19,7 +19,7 @@
 
 .splash-container h2 span {
     font-family: 'Playwrite', cursive;
-    font-size: 1rem;
+    font-size: 1.6rem;
     font-weight: bolder;
     font-style: italic;
     color: white;
@@ -40,5 +40,6 @@
 .splash-container button:hover {
     background-color: white;
     color: black;
+    cursor: url('/logo.svg'), auto;
     border: 1px solid black;
 }

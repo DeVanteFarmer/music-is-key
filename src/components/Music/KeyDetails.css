@@ -9,7 +9,16 @@
     padding: 20px;
   }
   
-
+  .music-key-title {
+    color: black;
+    font-size: 50px;
+    margin-bottom: 2rem;
+    border: 5px solid black !important;
+    background-color: lightsalmon;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+}
   
   .songs-card {
     display: flex;

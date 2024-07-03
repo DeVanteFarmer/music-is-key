@@ -55,7 +55,9 @@ export const MusicPage = ({ currentUser }) => {
 
   return (
     <>
-      <div className="music-title">SELECT A SONG!</div>
+      <div className="music-title">Sound Board!</div>
+      <h2>Like and comment on your favorite songs!</h2>
+      <h2>Select a song to see it's details!</h2>
       <div className="music-page">
         {allSongs.map((song) => (
           <Card key={song.id} className="song-card" onClick={() => navigate(`/MusicPage/songDetails/${song.id}`)}>

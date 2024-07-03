@@ -8,6 +8,10 @@ export const getAllKeys = () => {
   return fetch(`${API_BASE_URL}/keys`).then((res) => res.json())
 }
 
+export const getKeyDescriptions = () => {
+  return fetch(`${API_BASE_URL}/keyDescription`).then((res) => res.json())
+}
+
 export const getSongsById = (id) => {
   return fetch(`${API_BASE_URL}/songs/${id}`).then((res) => res.json())
 }

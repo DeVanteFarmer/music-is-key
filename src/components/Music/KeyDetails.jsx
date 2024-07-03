@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import { getAllSongs, getAllKeys } from "../../services/SongServices.jsx"
+import { getAllSongs, getAllKeys, getKeyDescriptions } from "../../services/SongServices.jsx"
 import { getUserById } from "../../services/UserServices.jsx"
 import { Card, CardBody, CardTitle, CardText } from "reactstrap"
 import './KeyDetails.css'
@@ -10,6 +10,7 @@ import './KeyDetails.css'
 export const KeyDetails = () => {
   const { keyId } = useParams()
   const [keyDetails, setKeyDetails] = useState(null)
+  const [keyDescription, setKeyDescription] = useState(null)
   const [songs, setSongs] = useState([])
   const [users, setUsers] = useState({})
   const [allKeys, setAllKeys] = useState([])
@@ -22,6 +23,10 @@ export const KeyDetails = () => {
         setAllKeys(keysArray)
         const keyData = keysArray.find(key => key.id === parseInt(keyId))
         setKeyDetails(keyData)
+
+        const keyDescriptionsArray = await getKeyDescriptions();
+        const keyDescriptionData = keyDescriptionsArray.find(description => description.key === keyData.key);
+        setKeyDescription(keyDescriptionData);
 
         if (keyData) {
           // Fetch all songs
@@ -50,12 +55,13 @@ export const KeyDetails = () => {
     fetchData()
   }, [keyId])
 
-  if (!keyDetails) return <div>Loading...</div>
+  if (!keyDetails || !keyDescription) return <div>Loading...</div>
 
   return (
     <div className="song-details-container">
       <div className="key-details-page">
-        <h2 className="music-title">Key: {keyDetails.key}</h2>
+        <h2 className="music-key-title">Key: {keyDetails.key}</h2>
+        <h3 className="key-title">{keyDescription.description}</h3>
         <div className="songs-card">
           {songs.map((song) => {
             const songKeyDetails = allKeys.find(key => key.id === song.keyId)

@@ -433,6 +433,12 @@
       "liked": true,
       "userId": 3,
       "id": 27
+    },
+    {
+      "songId": 6,
+      "liked": true,
+      "userId": 1,
+      "id": 28
     }
   ],
   "keys": [
@@ -547,6 +553,108 @@
       "key": "E Minor",
       "energyRate": 74,
       "promotesHappiness": true
+    }
+  ],
+  "keyDescription": [
+    {
+      "key": "C Major",
+      "description": "Bright and cheerful, often used to convey happy and joyful emotions. Popular in classical and pop music.",
+      "purpose": "Happiness, celebration, and positive emotions."
+    },
+    {
+      "key": "G Major",
+      "description": "Warm and harmonic, known for its bright and joyful sound. Frequently used in folk and pop music.",
+      "purpose": "Uplifting and positive feelings."
+    },
+    {
+      "key": "D Major",
+      "description": "Triumphant and victorious, often used to convey joy and celebration. Common in classical and rock music.",
+      "purpose": "Celebration and triumph."
+    },
+    {
+      "key": "A Major",
+      "description": "Optimistic and bright, commonly used to express cheerfulness and positivity. Found in classical and country music.",
+      "purpose": "Joy and optimism."
+    },
+    {
+      "key": "E Major",
+      "description": "Vibrant and lively, associated with energetic and powerful emotions. Popular in rock and classical music.",
+      "purpose": "Energy and excitement."
+    },
+    {
+      "key": "B Major",
+      "description": "Bold and rich, known for its powerful and triumphant sound. Often used in classical and jazz music.",
+      "purpose": "Power and boldness."
+    },
+    {
+      "key": "F Major",
+      "description": "Calm and relaxed, used to convey peaceful and serene emotions. Common in classical and folk music.",
+      "purpose": "Peace and serenity."
+    },
+    {
+      "key": "D Minor",
+      "description": "Melancholic and serious, often used to express sadness and introspection. Popular in classical and metal music.",
+      "purpose": "Sadness and introspection."
+    },
+    {
+      "key": "A Minor",
+      "description": "Somber and reflective, commonly used to convey melancholy and thoughtfulness. Found in classical and folk music.",
+      "purpose": "Melancholy and reflection."
+    },
+    {
+      "key": "E Minor",
+      "description": "Dark and mysterious, known for its emotional depth and introspection. Popular in classical and rock music.",
+      "purpose": "Mystery and depth."
+    },
+    {
+      "key": "B Minor",
+      "description": "Deep and dramatic, often used to convey powerful and intense emotions. Common in classical and metal music.",
+      "purpose": "Intensity and drama."
+    },
+    {
+      "key": "F# Minor",
+      "description": "Sad and melancholic, associated with deep emotional expression. Found in classical and jazz music.",
+      "purpose": "Emotional expression and melancholy."
+    },
+    {
+      "key": "C Minor",
+      "description": "Serious and somber, used to express deep emotion and introspection. Popular in classical and metal music.",
+      "purpose": "Seriousness and introspection."
+    },
+    {
+      "key": "G Minor",
+      "description": "Dark and emotional, known for its dramatic and intense sound. Common in classical and film music.",
+      "purpose": "Drama and intensity."
+    },
+    {
+      "key": "A♭ Minor",
+      "description": "Gloomy and introspective, used to evoke a sense of sorrow and reflection. Common in classical and jazz music.",
+      "purpose": "Sorrow and introspection."
+    },
+    {
+      "key": "C# Minor",
+      "description": "Expressive and emotional, known for its poignant and reflective qualities. Popular in classical and romantic music.",
+      "purpose": "Emotional depth and reflection."
+    },
+    {
+      "key": "F Minor",
+      "description": "Somber and dramatic, often used to convey a sense of tragedy and seriousness. Found in classical and film music.",
+      "purpose": "Tragedy and seriousness."
+    },
+    {
+      "key": "B♭ Minor",
+      "description": "Dark and brooding, known for its deep emotional expression. Common in classical and jazz music.",
+      "purpose": "Brooding and deep emotions."
+    },
+    {
+      "key": "B♭ Major",
+      "description": "Warm and regal, often used to convey a sense of grandeur and nobility. Popular in classical and jazz music.",
+      "purpose": "Grandeur and nobility."
+    },
+    {
+      "key": "A♭ Major",
+      "description": "Rich and expressive, known for its warm and uplifting qualities. Common in classical and romantic music.",
+      "purpose": "Warmth and upliftment."
     }
   ]
 }

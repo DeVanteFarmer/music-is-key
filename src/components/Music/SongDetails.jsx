@@ -60,7 +60,8 @@ export const SongDetails = ({ currentUser }) => {
 
   return (
     <>
-      <div className="music-title">SONG DETAILS!</div>
+      <div className="music-details-title">SONG DETAILS!</div>
+      <h2>Click on the song key to see it's details, and songs alike!</h2>
     <div className="song-details-container">
       <Card className="song-details-card">
         <CardBody>
